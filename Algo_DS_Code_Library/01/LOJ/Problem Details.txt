@@ -1,0 +1,35 @@
+1080 - Brush (IV)
+Problem:  	Given 16 2D points, make minimum number of straight lines which will cover all the points.
+Const:	    1000 cases, 16 points
+Solution: 	Make 16C2 lines and keep mask of points on each line, then DP.
+
+1048 - Conquering Keokradong
+Problem:    Given an array and K, divide the array into (K+1) subarray so that the maximum sum of them is minimized
+Solution:   Guess the maximum sum and binary search
+
+1061 - N Queen Again
+Problem:    Given 8x8 chessboard with 8 queens, move the queens in minimum moves (ans) so that none attacks another.
+Const:      200 cases.
+Solution:   only 93 configs where are no attacks, find minimum moves in dp for each config with given config.
+DP:         maskbit=taken row; in=curren column, queen; we assume jump over queens is allowed because it doesn't affect.
+
+1073 - DNA Sequence
+Problem:    given 16 strings, give minlen and lexsmall string that contains all of them.
+Const:      35 cases. strlen = 100
+Solution:   remove strings which are fully contained in another, then DP.
+            maskbit=taken string, in=last taken string; merge untaken string with last string, get max removing chars.
+
+1081 - Square Queries
+Problem:    given 500x500 grid of numbers, answer queries (50000) : max num in a square sub grid.
+Solution:   Quad Tree. (I STILL DON'T KNOW THE PROPER COMPLEXITY OF QUAD TREE).
+
+1086 - Jogging Trails
+Problem:    given a graph of 16 nodes, add edges to make euler trail but you can use any edge any number of times.
+Solution:   Floyd Warshal for all possible distances. DP. maskbit=odd degree node. put edge in 2 odd degree nodes.
+
+1087 - Diablo
+Problem:    given an array, Update(x) := push_back(x), Query(k) := print(get(k)) , remove(get(k))
+Solution:   SegTree. range(i,j) := remaining numbers in (i,j). use it for query(k) to get the index of kth man.
+
+
+
